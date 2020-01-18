@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, Input, ViewChild, ElementRef } from '@angular/core';
 import {LivingCenter} from '../../models/living-center.model';
+
 @Component({
   selector: 'app-living-center',
   templateUrl: './living-center.component.html',

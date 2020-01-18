@@ -21,9 +21,14 @@ ul {
   }
 }
 
+
 .center-info {
   display: flex;
   margin-top: 25px;
+
+  span {
+    text-indent: 8px;
+  }
 
   .center-detail {
     display: flex;
@@ -36,8 +41,17 @@ ul {
     .center-info-item {
       padding: 0 10px 10px 0;
       text-align: left;
+      display: flex;
+      align-items: center;
     }
 
+  }
 
+  ul {
+    li {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+    }
   }
 }
