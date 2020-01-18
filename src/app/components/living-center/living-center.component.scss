@@ -3,9 +3,18 @@
   width: 500px;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-container {
+  padding: 10px 25px;
+  //margin-bottom: 15px;
+}
 
 .filter-container {
-  padding: 15px 25px;
+  padding: 15px 0;
 
   .mat-checkbox {
     margin-right: 15px;
@@ -14,18 +23,21 @@
 
 .center-info {
   display: flex;
+  margin-top: 25px;
 
   .center-detail {
     display: flex;
     > div {
       display: flex;
       flex-direction: column;
-      padding: 15px;
+      padding: 0 15px 15px 0px;
     }
 
     .center-info-item {
-      padding: 10px;
+      padding: 0 10px 10px 0;
       text-align: left;
     }
+
+
   }
 }
