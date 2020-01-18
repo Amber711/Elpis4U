@@ -16,8 +16,9 @@ export class LivingCenterListComponent implements OnInit {
   }
 
   private getLivingCenterList(): void {
-    this.livingCenters = this.data.getLivingCenterList();
-    console.log('..', this.livingCenters);
+    this.data.getLivingCenterList().then(res => {
+      this.livingCenters = res;
+    });
   }
 
 }

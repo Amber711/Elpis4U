@@ -54,9 +54,19 @@
            </ul>
 
           </div>
-          <agm-map [latitude]="lat"
-                   [longitude]="lng"
-                   [zoom]="zoom" id="map"></agm-map>
+          <agm-map [latitude]="center.place_info.latitude"
+                   [longitude]="center.place_info.longitude"
+                   [zoom]="zoom" id="map">
+            <agm-marker
+              [latitude]="center.place_info.latitude"
+              [longitude]="center.place_info.longitude">
+
+              <agm-info-window>
+                <strong>{{center.place_info.address}}</strong>
+              </agm-info-window>
+
+            </agm-marker>
+          </agm-map>
         </div>
 
       </div>
