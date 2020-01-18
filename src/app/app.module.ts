@@ -3,16 +3,34 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule, MatIconModule, MatTabsModule} from '@angular/material';
+import { LivingCenterComponent } from './components/living-center/living-center.component';
+import { CharitableOrganizationComponent } from './components/charitable-organization/charitable-organization.component';
+import { DataService} from './services/data.service';
+import { LivingCenterListComponent } from './components/living-center-list/living-center-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LivingCenterComponent,
+    CharitableOrganizationComponent,
+    LivingCenterListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatCardModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'data',
+      useClass: DataService
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
