@@ -5,7 +5,11 @@
     <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
     <mat-card-content>
 
-      <div #gmap style="width:100%;height:400px"></div>
+      <!--<div #mapContainer id="map"></div>-->
+
+      <agm-map [latitude]="lat"
+               [longitude]="lng"
+               [zoom]="zoom" id="map"></agm-map>
     </mat-card-content>
   </mat-card-header>
 </mat-card>

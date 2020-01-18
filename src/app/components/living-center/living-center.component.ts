@@ -7,17 +7,15 @@ import {LivingCenter} from '../../models/living-center.model';
 })
 export class LivingCenterComponent implements OnInit {
   @Input() center: LivingCenter;
-  @ViewChild('mapContainer', {static: false}) gmap: ElementRef;
-  //map: google.maps.Map;
+  zoom: number = 8;
+
+  // initial center position for the map
+  lat: number = 51.673858;
+  lng: number = 7.815982;
   constructor(@Inject('data') private data ) { }
 
   ngOnInit() {
-    // const mapProp = {
-    //   center: new google.maps.LatLng(18.5793, 73.8143),
-    //   zoom: 15,
-    //   mapTypeId: google.maps.MapTypeId.ROADMAP
-    // };
-    // this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+
 
   }
 

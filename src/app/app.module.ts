@@ -9,7 +9,7 @@ import { LivingCenterComponent } from './components/living-center/living-center.
 import { CharitableOrganizationComponent } from './components/charitable-organization/charitable-organization.component';
 import { DataService} from './services/data.service';
 import { LivingCenterListComponent } from './components/living-center-list/living-center-list.component';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,12 @@ import { LivingCenterListComponent } from './components/living-center-list/livin
     BrowserAnimationsModule,
     MatTabsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDCFMW3svKE9jxPMJC3F6k-ERn6IHjAPQk',
+      // libraries: ["places", "geometry"]
+      /* apiKey is required, unless you are a premium customer, in which case you can use clientId */
+    })
   ],
   providers: [
     {
