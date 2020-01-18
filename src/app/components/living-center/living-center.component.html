@@ -42,14 +42,14 @@
                local_phone
                </i>:
                <span>
-               408-111-000
+               {{center.place_info.contact_info}}
                 </span>
              </li>
              <li>
                <i class="material-icons">
                access_time
                 </i>:
-               <span>8:00am - 12:00pm</span>
+               <span>{{center.place_info.hours}}</span>
              </li>
            </ul>
 
@@ -58,11 +58,12 @@
                    [longitude]="center.place_info.longitude"
                    [zoom]="zoom" id="map">
             <agm-marker
+              [iconUrl]="marker"
               [latitude]="center.place_info.latitude"
               [longitude]="center.place_info.longitude">
 
               <agm-info-window>
-                <strong>{{center.place_info.address}}</strong>
+                <strong class="address">{{center.place_info.address}}</strong>
               </agm-info-window>
 
             </agm-marker>
