@@ -3,13 +3,42 @@
     <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
     <mat-card-title>{{center.name}}</mat-card-title>
     <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-    <mat-card-content>
+  </mat-card-header>
+
+  <mat-card-content>
 
       <!--<div #mapContainer id="map"></div>-->
 
-      <agm-map [latitude]="lat"
-               [longitude]="lng"
-               [zoom]="zoom" id="map"></agm-map>
+      <div class="content-container">
+        <div class="filter-container">
+          <mat-checkbox>Food</mat-checkbox>
+          <mat-checkbox>Wardrobe</mat-checkbox>
+          <mat-checkbox>Available Bed Number</mat-checkbox>
+          <mat-checkbox>Available Shower Number</mat-checkbox>
+        </div>
+
+        <div class="center-info">
+          <div class="center-detail">
+            <div>
+              <div class="center-info-item">
+                Food Provide
+              </div>
+              <div class="center-info-item">
+                Bed Number
+              </div>
+            </div>
+            <div>
+              <div class="center-info-item">Wardrobe</div>
+              <div class="center-info-item">Shower Number: 5</div>
+            </div>
+          </div>
+          <agm-map [latitude]="lat"
+                   [longitude]="lng"
+                   [zoom]="zoom" id="map"></agm-map>
+        </div>
+
+      </div>
+
+
     </mat-card-content>
-  </mat-card-header>
 </mat-card>

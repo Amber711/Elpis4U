@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule, MatIconModule, MatTabsModule} from '@angular/material';
+import {MatCardModule, MatCheckbox, MatCheckboxModule, MatIconModule, MatTabsModule} from '@angular/material';
 import { LivingCenterComponent } from './components/living-center/living-center.component';
 import { CharitableOrganizationComponent } from './components/charitable-organization/charitable-organization.component';
 import { DataService} from './services/data.service';
@@ -24,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
     MatTabsModule,
     MatCardModule,
     MatIconModule,
+    MatCheckboxModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDCFMW3svKE9jxPMJC3F6k-ERn6IHjAPQk',
       // libraries: ["places", "geometry"]
