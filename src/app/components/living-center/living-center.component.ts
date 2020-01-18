@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, Input} from '@angular/core';
 import {LivingCenter} from '../../models/living-center.model';
+// @ts-ignore
 import marker from '../../../assets/images/location_marker.png';
 @Component({
   selector: 'app-living-center',

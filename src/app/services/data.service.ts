@@ -8,8 +8,7 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getLivingCenterList(): Promise<LivingCenter[]> {
-    //return LIVING_CENTERS;
+  getLivingCenterList(): any {
     return this.httpClient.get('https://elpis4u.herokuapp.com/api/living_centers')
       .toPromise()
       .then(res => {
