@@ -10,31 +10,26 @@
       <!--<div #mapContainer id="map"></div>-->
 
       <div class="content-container">
-        <div class="filter-container">
-          <mat-checkbox>Food</mat-checkbox>
-          <mat-checkbox>Wardrobe</mat-checkbox>
-          <mat-checkbox>Available Bed Number</mat-checkbox>
-          <mat-checkbox>Available Shower Number</mat-checkbox>
-        </div>
+
 
         <div class="center-info">
-          <div>
+          <div class="info-left">
             <div class="center-detail">
               <div>
-                <div class="center-info-item">
+                <div class="center-info-item" *ngIf="center.food_available">
                   <i class="material-icons food-i">fastfood</i> <span>Food Provide</span>
                 </div>
-                <div class="center-info-item">
+                <div class="center-info-item" *ngIf="center.bed_num > 0">
                   <i class="material-icons bed-i">hotel</i> <span>Bed Number</span>
                 </div>
               </div>
               <div>
-                <div class="center-info-item">
+                <div class="center-info-item" *ngIf="center.wardrobe_available">
                   <i class="material-icons wardrobe-i">
                     shopping_basket
                   </i> <span>Wardrobe</span>
                 </div>
-                <div class="center-info-item">
+                <div class="center-info-item" *ngIf="center.shower_num > 0">
                   <i class="material-icons bath-i">bathtub</i>
                   <span>Shower Number: 5</span>
                 </div>

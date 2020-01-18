@@ -29,18 +29,16 @@ ul {
   //margin-bottom: 15px;
 }
 
-.filter-container {
-  padding: 15px 0;
 
-  .mat-checkbox {
-    margin-right: 15px;
-  }
-}
 
 
 .center-info {
   display: flex;
   margin-top: 25px;
+
+  .info-left {
+    width: 380px;
+  }
 
   span {
     text-indent: 8px;

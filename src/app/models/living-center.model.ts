@@ -2,6 +2,8 @@ export class LivingCenter {
   id: number;
   name: string;
   place_info: PlaceInfo;
+  bed_num: number;
+  shower_num: number;
   org_type: string;
   food_available: boolean;
   clothes_available: boolean;

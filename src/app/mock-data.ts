@@ -9,6 +9,8 @@ export const LIVING_CENTERS: LivingCenter[] = [
     clothes_available: true,
     wardrobe_available: true,
     event: 'Miracle Messages',
+    bed_num: 30,
+    shower_num: 5,
     place_info: {
       id: 1,
       address: '3065 Van Sansul Ave, San Jose, CA 95128',
@@ -31,6 +33,8 @@ export const LIVING_CENTERS: LivingCenter[] = [
     clothes_available: true,
     wardrobe_available: false,
     event: 'Homeless Datathon',
+    bed_num: 10,
+    shower_num: 2,
     place_info: {
       id: 2,
       address: '1818 Scott Blvd, Santa Clara, CA 95050',
@@ -53,6 +57,8 @@ export const LIVING_CENTERS: LivingCenter[] = [
     clothes_available: true,
     wardrobe_available: true,
     event: 'xxxx',
+    bed_num: 0,
+    shower_num: 0,
     place_info: {
       id: 3,
       address: '2295 Plummer Ave, San Jose, CA 95125',
@@ -75,6 +81,8 @@ export const LIVING_CENTERS: LivingCenter[] = [
     clothes_available: false,
     wardrobe_available: false,
     event: 'Homeward Bound',
+    bed_num: 15,
+    shower_num: 2,
     place_info: {
       id: 4,
       address: '2295 Plummer Ave, San Jose, CA 95125',

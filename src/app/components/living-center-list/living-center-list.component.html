@@ -1,5 +1,18 @@
-<div *ngFor="let center of livingCenters">
-  <app-living-center [center]="center"></app-living-center>
+
+<div>
+  <div class="filter-container">
+    <mat-checkbox>Food</mat-checkbox>
+    <mat-checkbox>Wardrobe</mat-checkbox>
+    <mat-checkbox>Available Bed Number</mat-checkbox>
+    <mat-checkbox>Available Shower Number</mat-checkbox>
+  </div>
+
+  <div *ngFor="let center of livingCenters">
+
+    <app-living-center [center]="center"></app-living-center>
+  </div>
+
 </div>
+
 
 
