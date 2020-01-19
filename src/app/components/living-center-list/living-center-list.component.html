@@ -1,14 +1,14 @@
 
 <div>
   <div class="filter-container">
-    <mat-checkbox>Food</mat-checkbox>
-    <mat-checkbox>Wardrobe</mat-checkbox>
-    <mat-checkbox>Available Bed Number</mat-checkbox>
-    <mat-checkbox>Available Shower Number</mat-checkbox>
+    <mat-checkbox [checked]="filters[food_available]" (change)="handleFilterChange($event, 'food_available')">Food</mat-checkbox>
+    <mat-checkbox [checked]="filters[wardrobe_available]" (change)="handleFilterChange($event, 'wardrobe_available')">Wardrobe</mat-checkbox>
+    <mat-checkbox [checked]="filters[bed_num]" (change)="handleFilterChange($event, 'bed_num')">Bed</mat-checkbox>
+    <mat-checkbox [checked]="filters[shower_num]" (change)="handleFilterChange($event, 'shower_num')">Shower</mat-checkbox>
   </div>
 
-  <div *ngFor="let center of livingCenters">
-    <app-living-center [center]="center"></app-living-center>
+  <div *ngFor="let center of livingCenters | centerFilter: filterArr; let i = index ">
+    <app-living-center [center]="center" [index]="i"></app-living-center>
   </div>
 
 </div>

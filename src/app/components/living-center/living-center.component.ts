@@ -9,6 +9,7 @@ import marker from '../../../assets/images/location_marker.png';
 })
 export class LivingCenterComponent implements OnInit {
   @Input() center: LivingCenter;
+  @Input() index: number;
   zoom: number = 6;
   marker: any = {
     url: marker,

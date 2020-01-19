@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule, MatCheckbox, MatCheckboxModule, MatIconModule, MatTabsModule} from '@angular/material';
 import { LivingCenterComponent } from './components/living-center/living-center.component';
@@ -10,12 +11,14 @@ import { CharitableOrganizationComponent } from './components/charitable-organiz
 import { DataService} from './services/data.service';
 import { LivingCenterListComponent } from './components/living-center-list/living-center-list.component';
 import { AgmCoreModule } from '@agm/core';
+import { CenterFilterPipe } from './filter/center-filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     LivingCenterComponent,
     CharitableOrganizationComponent,
-    LivingCenterListComponent
+    LivingCenterListComponent,
+    CenterFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { AgmCoreModule } from '@agm/core';
     MatIconModule,
     MatCheckboxModule,
     HttpClientModule,
+    FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDCFMW3svKE9jxPMJC3F6k-ERn6IHjAPQk',
       // libraries: ["places", "geometry"]
